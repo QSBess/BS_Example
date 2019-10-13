@@ -1,0 +1,40 @@
+#main-greeting {
+				position: relative;
+				top: 15%;
+				font-style: italic;
+			}
+#main-greeting-script {
+				position: relative;
+				top: 88.5%;
+				right: 54%;
+				font-style: italic;
+			}
+.pg-heading {
+				position: relative;
+				top: 5%;
+			}
+.nav-logo {
+				width:40px;
+			}
+.navbar-brand {
+				position: relative;
+				left: 1%;
+			}
+.nav-bar-main {
+				margin-left:50%;
+			}
+.tab-sec-nav {
+				top:25%;
+				margin-top:50%;
+				margin-bottom:25%;
+			}
+.card {	
+				width:300px;
+				position: relative;
+				right: 15%;
+				top: 5%;
+	}
+#pg3img {
+				position: relative;
+				top: 15%;
+	}
