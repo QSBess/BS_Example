@@ -1,40 +1,268 @@
-#main-greeting {
-				position: relative;
-				top: 15%;
-				font-style: italic;
-			}
-#main-greeting-script {
-				position: relative;
-				top: 88.5%;
-				right: 54%;
-				font-style: italic;
-			}
-.pg-heading {
-				position: relative;
-				top: 5%;
-			}
-.nav-logo {
-				width:40px;
-			}
-.navbar-brand {
-				position: relative;
-				left: 1%;
-			}
-.nav-bar-main {
-				margin-left:50%;
-			}
-.tab-sec-nav {
-				top:25%;
-				margin-top:50%;
-				margin-bottom:25%;
-			}
-.card {	
-				width:300px;
-				position: relative;
-				right: 15%;
-				top: 5%;
+@media (min-width: 1200px) { /*XL - Large Desktop*/ 
+	#main-greeting {
+		font-size: 22px;
 	}
-#pg3img {
-				position: relative;
-				top: 15%;
+	.nav-logo {
+		width: 45px;
 	}
+	#main-navbar-menu {
+		margin-left: 40%;
+	}
+	.pg-navbar-menu {
+		margin-left: 42%;
+	}
+	#main-tab-sec {
+		top: 25%;
+		margin-top: 55%;
+	}
+	#pg-tab-sec {
+		top: 25%;
+		margin-top: 55%;
+	}
+	.carousel-indicators {
+		position: relative;
+		top: 110%;
+	}
+	.card {	
+		width: 300px;
+	}
+	.card-img-top {
+		width: 298px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199.98px) { /*LG - Desktop*/
+	#main-head-text {
+		position: relative;
+		left: 3%;
+	}
+	.main-heading {
+		font-size: 5.5em;
+	}
+	.pg-heading {
+		font-size: 4.25em;
+	}
+	#main-greeting {		
+		font-size: 17px;
+	}
+	#main-rounded-circle {
+		width: 85%;
+	}
+	.nav-logo {
+		width: 45px;
+	}
+	#main-tab-sec {
+		top: 25%;
+		margin-top: 55%;
+	}
+	#pg-tab-sec {
+		top:25%;
+		margin-top: 55%;
+	}
+	.carousel-indicators {
+		position: relative;
+		top: 100%;
+	}
+	.card {	
+		width: 250px;
+	}
+	.card-img-top {
+		width: 248px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991.98px) { /*MD - Tablet*/
+	#main-head-text {
+		width: 100%;
+	}
+	.main-heading{
+		width: 76%;
+		font-size: 4.5em;		
+	}
+	.pg-heading {
+		font-size: 3em;
+	}
+	#main-greeting  {
+		font-size: 17px;
+	}
+	#main-circle-div {
+		width: 100%;
+	}
+	#main-rounded-circle {
+		width: 42%;	
+	}
+	#pg-rounded-circle {
+		width: 85%
+	}
+	.nav-logo {
+		width: 45px;
+	}	
+	#main-tab-sec {
+		width: 75%;
+		position: relative;
+		top: 100%;
+		z-index: 0;
+	}
+	#pg-tab-sec {
+		width: 90%;
+		position: relative;
+		top: 100%;
+		z-index: 0;
+	}
+	#sec-pic {
+		width: 90%;
+	}
+	#slideshow {
+		position: relative;
+		right: 5%;
+	}
+	#carousel-heading {
+		font-size: 1.5em;
+		padding-left: 10%;
+	}
+	.carousel-indicators {
+		position: absolute;
+		top: 98%;
+		left: 10%;
+	}
+	.carousel-inner {
+		width: 110%;
+	}
+	.carousel-control-next {
+		position: absolute;
+		left: 80%;
+	}
+	.card {	
+		width: 200px;
+		font-size: 90%;
+	}
+	.card-img-top {
+		width: 198px;
+	}
+}
+@media (min-width: 576px) and (max-width: 767.98px) { /*SM - Landscape Mobile*/
+	#main-head-text {
+		width: 100%;
+	}
+	.main-heading {
+		font-size: 4.25em;
+		width: 80%;
+	}
+	#main-greeting {
+		font-size: 14px;
+		width: 75%;
+	}	
+	.pg-head-text {
+		width: 55%;
+	}
+	.pg-heading {			
+		font-size: 2.75em;
+		width: 75%;
+	}
+	#main-circle-div {
+		width: 100%;
+	}
+	#main-rounded-circle {
+		width: 50%;
+	}
+	#pg-circle-div {
+		width: 45%;
+	}
+	#pg-rounded-circle {
+		width: 75%;
+	}
+	.nav-logo {
+		width: 45px;
+	}
+	.nav-item {
+		margin: auto;
+	}
+	#main-tab-sec {
+		margin-top: 10%;
+		z-index: 0;
+	}
+	#pg-tab-sec {
+		margin: auto;
+		margin-top: 10%;
+		padding: 5px;
+		z-index: 0;
+	}	
+	#sec-pic {
+		width: 90%;
+	}
+	.carousel-indicators {
+		position: absolute;
+		top: 115%;
+	}
+	.card {
+		width: 90%;
+	}
+	#pg3img {		
+		margin-left: 12%;
+		padding: 50px;			
+	}
+	.form-group {
+		font-size: 80%;
+	}
+}
+@media (max-width: 576px) { /*XS - Portrait Mobile*/
+	.main-heading {
+		font-size: 3.5em;
+	}
+	#main-greeting {
+		font-size: 14px;
+	}
+	.pg-head-text {
+		width: 55%;
+	}
+	.pg-heading {			
+		font-size: 2.75em;
+		width: 75%;
+	}
+	#main-rounded-circle {
+		width: 60%;
+	}
+	#pg-circle-div {
+		width: 45%;
+	}
+	#pg-rounded-circle {
+		width: 75%;
+	}	
+	.nav-logo {
+		width: 45px;
+	}
+	#main-tab-sec {
+		width: 90%;
+		margin-top: 10%;
+		z-index: 0;
+	}
+	#pg-tab-sec {
+		width: 75%;
+		margin-top: 10%;
+		z-index: 0;
+	}		
+	#sec-pic {
+		width: 90%;
+	}
+	.carousel-indicators {
+		position: absolute;
+		top: 115%;
+	}
+	.card {	
+		width: 90%;
+		font-size: 90%;
+	}
+	#pg3img {		
+		margin-left: 15%;
+		padding: 40px;
+	}
+	form {
+		width: 90%;
+		margin: auto;
+	}
+	#form-heading {
+		font-size: 1.7em;
+	}
+	.input-group-text, .form-group {
+		font-size: 90%;
+	}
+}	
+
