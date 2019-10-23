@@ -12,29 +12,40 @@
 	<script src="BS_Main_Script.js"></script>
 <head>
 <body onload="dayOfWeek()">
-	<div class="fluid-container bg-primary p-5" id="main-header">
-		<div class="row">
-			<div class="col-lg-1"></div>
-			<div class="col-lg-4">
-				<h1 class="display-1 bg-light p-3 mb-3" id="main-heading">Website Heading</h1>
-				<p>Introduction text...</p>
-				<h4 id="main-greeting">We hope you're having spectacular</h4>
+		<div id="main-header" class="clearfix bg-primary p-5 
+								p-sm-0 pt-sm-4 pb-sm-4
+								p-lg-0 pt-lg-5 pb-lg-4  
+								p-xl-0 pt-xl-5 pr-xl-3 pb-xl-4 pl-xl-3">
+			<div id="main-head-text" class="float-left ml-lg-4 ml-xl-5">
+				<h1 class="main-heading d-none d-lg-block display-1 w-80 text-center bg-light p-lg-2 pb-lg-3">Website<br> Heading</h1>
+				<h1 class="main-heading d-block d-lg-none display-1 text-center bg-light mx-auto p-2 pb-3">Website Heading</h1>
+				<p class="d-none d-lg-block mt-lg-3 ml-lg-2 
+							mt-xl-3 ml-xl-4">Introduction text...<br>
+				Lorem ipsum dolor sit amet, <br>
+				consectetur adipisicing elit, sed do eiusmod tempor <br>
+				incididunt ut labore et dolore magna aliqua.</p>
+				<h4 id="main-greeting" class="font-italic text-center d-block mx-auto mt-4 mb-4
+												mt-sm-3 mb-sm-3 
+												mt-md-4 mb-md-4 
+												mt-lg-5 mb-lg-0 pt-lg-4 
+												mt-xl-5 mb-xl-0 pt-xl-1"></h4>
 			</div>
-			<div class="col-lg-1"><h4 id="main-greeting-script"></h4></div>
-			<div class="col-lg-5">
-				<img src="BS_Main_Pic_Ex1.jpg" class="rounded-circle" alt="Home Example">
+			<div id="main-circle-div" class="float-right mr-lg-0 mr-xl-4">
+				<img src="BS_Main_Pic_Ex1.jpg" id="main-rounded-circle" class="rounded-circle d-block w-90 mx-auto mb-md-2 
+															mt-lg-4 mb-lg-0 
+															mt-xl-0 mb-xl-0" alt="Home Example">
 			</div>
-			<div class="col-lg-1"></div>
 		</div>
-	</div>
-	<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-		<a href="#main-header" class="navbar-brand">
-			<img src="BS_Logo_Pic_Ex1.jpg" class="nav-logo pb-1" alt="Logo"> 
-		</a>
-		<a href="#main-header" class="navbar-brand"><h2>Website Logo</h2></a>
-		<ul class="navbar-nav nav-bar-main">
+	<nav class="navbar navbar-expand-xl sticky-top bg-dark navbar-dark">
+		<div class="mx-auto mx-sm-auto mx-md-auto ml-lg-2">
+			<a href="#main-header" class="navbar-brand">
+				<img src="BS_Logo_Pic_Ex1.jpg" class="nav-logo align-bottom" alt="Logo"> 
+			</a>
+			<a href="#main-header" class="navbar-brand"><h2>Website Logo</h2></a>
+		</div>
+		<ul id="main-navbar-menu" class="navbar-nav navbar-menu flex-row mx-auto mx-sm-auto mx-md-auto mr-lg-5 pr-lg-1 mr-xl-0 pr-xl-0">
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 1</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 1</a>
 				<div class="dropdown-menu">
 					<a href="BS_Ex_PG_1st.html" class="dropdown-item">Page 1</a>
 					<a href="BS_Ex_PG_2nd.html" class="dropdown-item">Page 2</a>
@@ -42,7 +53,7 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 2</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 2</a>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">Page 1</a>
 					<a href="#" class="dropdown-item">Page 2</a>
@@ -50,7 +61,7 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 3</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 3</a>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">Page 1</a>
 					<a href="#" class="dropdown-item">Page 2</a>
@@ -58,7 +69,7 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 4</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 4</a>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">Page 1</a>
 					<a href="#" class="dropdown-item">Page 2</a>
@@ -69,16 +80,16 @@
 	</nav>
 	<div class="container bg-light">
 	<div class="row">
-		<div class="col-lg-2">
-		<ul class="nav nav-tabs flex-column bg-dark sticky-top tab-sec-nav" role="tablist">
-			<li class="nav-item"><a href="#sec1" class="nav-link" data-toggle="tab">Section 1</a></li>
-			<li class="nav-item"><a href="#sec2" class="nav-link" data-toggle="tab">Section 2</a></li>
-			<li class="nav-item"><a href="#sec3" class="nav-link" data-toggle="tab">Section 3</a></li>
+		<div class="col-lg-2 col-xl-2">
+		<ul id="main-tab-sec" class="nav nav-tabs sticky-top bg-dark flex-md-row mx-auto" role="tablist">
+			<li class="nav-item mx-auto"><a href="#sec1" class="nav-link sec-link" data-toggle="tab">Section 1</a></li>
+			<li class="nav-item mx-auto"><a href="#sec2" class="nav-link sec-link" data-toggle="tab">Section 2</a></li>
+			<li class="nav-item mx-auto"><a href="#sec3" class="nav-link sec-link" data-toggle="tab">Section 3</a></li>
 		</ul>
 		</div>
-		<div class="col-lg-10 tab-content mt-4">
+		<div id="sec-div" class="col-lg-10 col-xl-10 tab-content mt-3 mt-md-5 mt-lg-3 mt-xl-4">
 			<div id="sec1" class="container tab-pane active"><br>
-				<h3>Section heading 1</h3>
+				<h3 class="pl-md-0">Section heading 1</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
@@ -107,7 +118,7 @@
 				</div>
 			</div>
 			<div id="sec2" class="container tab-pane fade"><br>
-				<h3>Section heading 2</h3>
+				<h3 class="pl-md-0">Section heading 2</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				incididunt ut labore et dolore magna aliqua.</p>
 				<div class="pag-div">
@@ -118,7 +129,7 @@
 				</div>
 			</div>
 			<div id="sec3" class="container tab-pane fade"><br>
-				<h3>Section heading 3</h3>
+				<h3 class="pl-md-0">Section heading 3</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				incididunt ut labore et dolore magna aliqua.</p>
 				<div class="pag-div">
