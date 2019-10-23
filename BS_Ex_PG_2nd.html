@@ -9,42 +9,50 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="BS_Main_Script.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('[data-toggle="tooltip"]').tooltip();
 		});
 </script>
 <head>
-<body>
-	<div class="fluid-container bg-primary p-3">
-		<div class="row">
-			<div class="col-lg-2"></div>
-			<div class="col-lg-4">
-				<h1 class="display-3 bg-light pg-heading p-2 pb-3 text-center">Website Heading</h1>
+<body onload="dayOfWeek()">
+		<div class="clearfix bg-primary pt-3 pb-3 pl-3
+						pt-sm-3 pb-sm-3 pl-sm-0
+					p-md-3 
+					p-lg-3 
+					p-xl-3">
+			<div class="pg-head-text float-left ml-md-4 ml-lg-5">
+				<h1 class="pg-heading display-3 bg-light text-center mx-auto mx-sm-auto mx-md-auto ml-lg-3 ml-xl-5 p-1 pb-2
+																p-sm-2 pb-sm-3 
+																p-md-3 pb-md-4">Website Heading</h1>
+				<h4 id="main-greeting" class="font-italic text-center d-block mx-auto mt-3 
+												mt-sm-4 
+												mt-md-5 pt-md-2 
+												mt-xl-5 ml-xl-4 pt-xl-2 pl-xl-2"></h4>
 			</div>
-			<div class="col-lg-2"></div>
-			<div class="col-lg-2">
-				<img src="BS_PGHead_Pic_Ex1.jpg" class="rounded-circle" alt="Home Example">
+			<div id="pg-circle-div" class="float-right mr-md-1 mr-lg-5">
+				<img id="pg-rounded-circle" src="BS_PGHead_Pic_Ex1.jpg" class="rounded-circle d-block mx-auto mr-xl-5" alt="Home Example">
 			</div>
-			<div class="col-lg-2"></div>
 		</div>
-	</div>
-	<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-		<a href="BS_Ex_Main.html" class="navbar-brand">
-			<img src="BS_Logo_Pic_Ex1.jpg" class="nav-logo pb-1" alt="Logo"> 
-		</a>
-		<a href="BS_Ex_Main.html" class="navbar-brand"><h2>Website Logo</h2></a>
-		<ul class="navbar-nav nav-bar-main">
+	<nav class="navbar navbar-expand-xl sticky-top bg-dark navbar-dark">
+		<div class="mx-auto mx-sm-auto mx-md-auto ml-lg-1 ml-xl-3">
+			<a href="BS_Ex_Main.html" class="navbar-brand">
+				<img src="BS_Logo_Pic_Ex1.jpg" class="nav-logo align-bottom" alt="Logo"> 
+			</a>
+			<a href="BS_Ex_Main.html" class="navbar-brand"><h2>Website Logo</h2></a>
+		</div>
+		<ul class="navbar-nav navbar-menu pg-navbar-menu flex-row mx-auto mx-sm-auto mx-md-auto mr-lg-1">
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 1</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 1</a>
 				<div class="dropdown-menu">
 					<a href="BS_Ex_PG_1st.html" class="dropdown-item">Page 1</a>
-					<a href="#" class="dropdown-item">Page 2</a>
+					<a href="" class="dropdown-item">Page 2</a>
 					<a href="BS_Ex_PG_3rd.html" class="dropdown-item">Page 3</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 2</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 2</a>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">Page 1</a>
 					<a href="#" class="dropdown-item">Page 2</a>
@@ -52,7 +60,7 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 3</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 3</a>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">Page 1</a>
 					<a href="#" class="dropdown-item">Page 2</a>
@@ -60,7 +68,7 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 4</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 4</a>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">Page 1</a>
 					<a href="#" class="dropdown-item">Page 2</a>
@@ -69,15 +77,15 @@
 			</li>			
 		</ul>
 	</nav>
-	<div class="fluid-container p-5">
-		<div class="row bg-light p-3 pb-5">
-			<div class="col-lg-9">
+	<div class="fluid-container p-2 p-md-3 p-lg-4">
+		<div class="row bg-light p-2 p-md-3 p-lg-4">
+			<div class="col-sm-12 col-md-8">
 				<div id="slideshow" class="carousel slide w-75 h-75 mx-auto" data-ride="carousel">
-				<h3 class="text-primary text-center">Catch the carousel!!!</h3>
+				<h3 id="carousel-heading" class="text-primary text-center pb-3 pb-md-4 pb-lg-0">Catch the carousel!!!</h3>
 					<ul class="carousel-indicators">
 						<li data-target="#slideshow" data-slide-to="0" class="active"></li>
-						<li data-target="#slideshow" data-slide-to="1"></li>
-						<li data-target="#slideshow" data-slide-to="2"></li>
+						<li data-target="#slideshow" data-slide-to="1" class=""></li>
+						<li data-target="#slideshow" data-slide-to="2" class=""></li>
 					</ul>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
@@ -90,15 +98,24 @@
 							<img src="BS_Carousel_Ex_Pic3.jpg" class="w-100 h-100" alt="Summer Home">
 						</div>
 					</div>
-					<a class="carousel-control-prev" href="#slideshow" data-slide="prev">
+					<a class="carousel-control-prev mt-5 pt-5 
+									mt-sm-5 pt-sm-5 
+									mt-md-5 mr-md-5 pt-md-5 
+									mt-lg-5 mr-lg-0	pt-lg-5 
+									mt-xl-5 pt-xl-5" href="#slideshow" data-slide="prev">
 						<span class="carousel-control-prev-icon"></span></a>
-					<a class="carousel-control-next" href="#slideshow" data-slide="next">
+					<a class="carousel-control-next mt-5 pt-5
+									ml-md-5" href="#slideshow" data-slide="next">
 						<span class="carousel-control-next-icon"></span></a>
 				</div>
 			</div>
-			<div class="col-lg-3">
-				<div class="card">
-					<img class="card-img-top" src="BS_Card_Pic_Ex1.jpg" alt="Card Image">
+			<div class="col-sm-12 col-md-4">
+				<div class="card mx-auto mx-sm-auto mt-4 mt-md-3 mt-xl-5">
+					<div class="row">
+					<div class="col-6 col-md-12 my-auto">
+					<img class="card-img-top ml-3 ml-md-0" src="BS_Card_Pic_Ex1.jpg" alt="Card Image">
+					</div>
+					<div class="col-6 col-md-12">
 					<div class="card-body">
 						<h4 class="card-title">Interiors</h4>
 						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
@@ -120,6 +137,8 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					</div>
 					</div>
 				</div>
 			</div>
