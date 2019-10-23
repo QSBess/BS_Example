@@ -9,30 +9,38 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="BS_Main_Script.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <head>
-<body>
-		<div class="fluid-container bg-primary p-3">
-		<div class="row">
-			<div class="col-lg-2"></div>
-			<div class="col-lg-4">
-				<h1 class="display-3 bg-light pg-heading p-2 pb-3 text-center">Website Heading</h1>
+<body onload="dayOfWeek()">
+		<div class="clearfix bg-primary pt-3 pb-3 pl-3
+						pt-sm-3 pb-sm-3 pl-sm-0
+						p-md-3 
+						p-lg-3 
+						p-xl-3">
+			<div class="pg-head-text float-left ml-md-4 ml-lg-5">
+				<h1 class="pg-heading display-3 bg-light text-center mx-auto mx-sm-auto mx-md-auto ml-lg-3 ml-xl-5 p-1 pb-2
+																p-sm-2 pb-sm-3 
+																p-md-3 pb-md-4">Website Heading</h1>
+				<h4 id="main-greeting" class="font-italic text-center d-block mx-auto mt-3 
+													mt-sm-4 
+													mt-md-5 pt-md-2 
+													mt-xl-5 ml-xl-4 pt-xl-2 pl-xl-2"></h4>
 			</div>
-			<div class="col-lg-2"></div>
-			<div class="col-lg-2">
-				<img src="BS_PGHead_Pic_Ex1.jpg" class="rounded-circle" alt="Home Example">
+			<div id="pg-circle-div" class="float-right mr-md-1 mr-lg-5">
+				<img id="pg-rounded-circle" src="BS_PGHead_Pic_Ex1.jpg" class="rounded-circle d-block mx-auto mr-xl-5" alt="Home Example">
 			</div>
-			<div class="col-lg-2"></div>
 		</div>
-	</div>
-	<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-		<a href="BS_Ex_Main.html" class="navbar-brand">
-			<img src="BS_Logo_Pic_Ex1.jpg" class="nav-logo pb-1" alt="Logo"> 
-		</a>
-		<a href="BS_Ex_Main.html" class="navbar-brand"><h2>Website Logo</h2></a>
-		<ul class="navbar-nav nav-bar-main">
+	<nav class="navbar navbar-expand-xl sticky-top bg-dark navbar-dark">
+		<div class="mx-auto mx-sm-auto mx-md-auto ml-lg-1 ml-xl-3">
+			<a href="BS_Ex_Main.html" class="navbar-brand">
+				<img src="BS_Logo_Pic_Ex1.jpg" class="nav-logo align-bottom" alt="Logo"> 
+			</a>
+			<a href="BS_Ex_Main.html" class="navbar-brand"><h2>Website Logo</h2></a>
+		</div>
+		<ul class="navbar-nav navbar-menu pg-navbar-menu flex-row mx-auto mx-sm-auto mx-md-auto mr-lg-1">
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 1</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 1</a>
 				<div class="dropdown-menu">
 					<a href="BS_Ex_PG_1st.html" class="dropdown-item">Page 1</a>
 					<a href="BS_Ex_PG_2nd.html" class="dropdown-item">Page 2</a>
@@ -40,7 +48,7 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 2</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 2</a>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">Page 1</a>
 					<a href="#" class="dropdown-item">Page 2</a>
@@ -48,7 +56,7 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 3</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 3</a>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">Page 1</a>
 					<a href="#" class="dropdown-item">Page 2</a>
@@ -56,7 +64,7 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Menu 4</a>
+			<a href="#" class="nav-link dropdown-toggle pl-3" data-toggle="dropdown">Menu 4</a>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">Page 1</a>
 					<a href="#" class="dropdown-item">Page 2</a>
@@ -67,71 +75,71 @@
 	</nav>
 	<div class="container bg-light">
 	<div class="row">
-	<div class="col-lg-3">
-		<img src="BS_PG3_Pic1.jpg" alt="Home" class="w-75 ml-5" id="pg3img">
+	<div class="col-sm-12 col-md-4">
+		<img src="BS_PG3_Pic1.jpg" id="pg3img" class="w-75 ml-md-3 mt-md-5 pt-md-5 ml-lg-5" alt="Home">
 	</div>
-	<div class="col-lg-9">
-		<form class="m-5">
-			<h2>Fill out a form</h2>
-			<div class="input-group mb-3">
+	<div class="col-sm-12 col-md-8">
+		<form class="mt-md-5 mr-md-3 m-lg-5">
+			<h2 id="form-heading">Fill out a form</h2>
+			<div class="input-group mb-2 mb-lg-3">
 				<div class="input-group-prepend">
 					<span class="input-group-text" data-toggle="tooltip" title="Enter your name"><i class="fas fa-user"></i>&nbsp;Name:</span>
 				</div>
 				<input type="text" class="form-control">
 			</div>
-			<div class="input-group mb-3">
+			<div class="input-group mb-2 mb-lg-3">
 				<div class="input-group-prepend">
 					<span class="input-group-text" data-toggle="tooltip" title="Enter your email address"><i class="fas fa-envelope"></i>&nbsp;Email:</span>
 				</div>
 				<input type="email" class="form-control">
 			</div>
-			<div class="input-group mb-3">
+			<div class="input-group mb-2 mb-lg-3">
 				<div class="input-group-prepend">
 					<span class="input-group-text" data-toggle="tooltip" title="Enter a password"><i class="fas fa-key"></i>&nbsp;Password:</span>
 				</div>
 				<input type="password" class="form-control">
 			</div>
-			<div class="input-group mb-3">
+			<div class="input-group mb-2 mb-lg-3">
 				<div class="input-group-prepend">
 					<span class="input-group-text" data-toggle="tooltip" title="Enter password again">Re-enter Password:</span>
 				</div>
 				<input type="password" class="form-control">
 			</div>
-			<div class="form-group">
-				<p data-toggle="tooltip" title="Select a rating">Rating:</p>
-				<div class="custom-control custom-checkbox custom-control-inline mb-3">
+			<p data-toggle="tooltip" title="Select a rating">Rating:</p>
+			<div class="form-group text-center text-sm-center text-md-center text-lg-left">
+				<div class="custom-control custom-checkbox custom-control-inline mr-md-3 mb-md-2 mr-lg-1 mb-lg-2 mr-xl-4 mb-xl-3">
 					<input type="checkbox" class="custom-control-input" id="excellent" name="Excellent">
 					<label class="custom-control-label" for="excellent">Excellent</label>
 				</div>
-				<div class="custom-control custom-checkbox custom-control-inline mb-3">
+				<div class="custom-control custom-checkbox custom-control-inline mr-md-3 mb-md-2 mr-lg-1 mb-lg-2 mr-xl-4 mb-xl-3">
 					<input type="checkbox" class="custom-control-input" id="verygood" name="Very Good">
 					<label class="custom-control-label" for="verygood">Very Good</label>
 				</div>
-				<div class="custom-control custom-checkbox custom-control-inline mb-3">
+				<div class="custom-control custom-checkbox custom-control-inline mr-md-3 mb-md-2 mr-lg-1 mb-lg-2 mr-xl-4 mb-xl-3">
 					<input type="checkbox" class="custom-control-input" id="good" name="Good">
 					<label class="custom-control-label" for="good">Good</label>
 				</div>
-				<div class="custom-control custom-checkbox custom-control-inline mb-3">
+				<div class="custom-control custom-checkbox custom-control-inline mr-md-3 mb-md-2 mr-lg-1 mb-lg-2 mr-xl-4 mb-xl-3">
 					<input type="checkbox" class="custom-control-input" id="fair" name="Fair">
 					<label class="custom-control-label" for="fair">Fair</label>
 				</div>
-				<div class="custom-control custom-checkbox custom-control-inline mb-3">
+				<div class="custom-control custom-checkbox custom-control-inline mr-md-3 mb-md-2 mr-lg-1 mb-lg-2 mr-xl-4 mb-xl-3">
 					<input type="checkbox" class="custom-control-input" id="poor" name="Poor">
 					<label class="custom-control-label" for="poor">Poor</label>
 				</div>
-				<div class="custom-control custom-checkbox custom-control-inline mb-3">
+				<div class="custom-control custom-checkbox custom-control-inline mr-md-3 mb-md-2 mr-lg-1 mb-lg-2 mr-xl-4 mb-xl-3">
 					<input type="checkbox" class="custom-control-input" id="verypoor" name="Very Poor">
 					<label class="custom-control-label" for="verypoor">Very Poor</label>
 				</div>
 			</div>		
-			<div class="input-group mb-3">
+			<div class="input-group mb-2 mb-lg-3">
 				<div class="input-group-prepend">
 					<span class="input-group-text" data-toggle="tooltip" title="Enter comments">Comments:</span>
 				</div>
-				<textarea class="form-control" rows="5" id="comment">
+				<textarea id="comment" class="form-control p-0" rows="5">
 				</textarea>
 			</div>
-			<button type="submit" class="btn btn-primary d-block mx-auto">Submit</button>
+			<button type="submit" class="btn btn-primary d-block mx-auto mb-2">Submit</button>
 		</form>
 	</div>
 	</div>
